@@ -77,9 +77,6 @@ declare module '$env/static/private' {
 	export const AWS_BUCKET: string;
 	export const AWS_USE_PATH_STYLE_ENDPOINT: string;
 	export const VITE_APP_NAME: string;
-	export const SCOUT_DRIVER: string;
-	export const MEILISEARCH_HOST: string;
-	export const MEILISEARCH_NO_ANALYTICS: string;
 	export const npm_config_user_agent: string;
 	export const HOSTNAME: string;
 	export const npm_node_execpath: string;
@@ -198,9 +195,6 @@ declare module '$env/dynamic/private' {
 		AWS_BUCKET: string;
 		AWS_USE_PATH_STYLE_ENDPOINT: string;
 		VITE_APP_NAME: string;
-		SCOUT_DRIVER: string;
-		MEILISEARCH_HOST: string;
-		MEILISEARCH_NO_ANALYTICS: string;
 		npm_config_user_agent: string;
 		HOSTNAME: string;
 		npm_node_execpath: string;

@@ -10,4 +10,7 @@ export default defineConfig({
         }),
         sveltekit(),
     ],
+    ssr: {
+        noExternal: ['@googlemaps/js-api-loader']
+    }
 })
