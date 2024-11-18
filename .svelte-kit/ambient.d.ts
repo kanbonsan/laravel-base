@@ -80,66 +80,42 @@ declare module '$env/static/private' {
 	export const SCOUT_DRIVER: string;
 	export const MEILISEARCH_HOST: string;
 	export const MEILISEARCH_NO_ANALYTICS: string;
-	export const LESSOPEN: string;
-	export const USER: string;
 	export const npm_config_user_agent: string;
-	export const GIT_ASKPASS: string;
+	export const HOSTNAME: string;
 	export const npm_node_execpath: string;
-	export const SHLVL: string;
-	export const WT_PROFILE_ID: string;
 	export const npm_config_noproxy: string;
-	export const MOTD_SHOWN: string;
 	export const HOME: string;
-	export const TERM_PROGRAM_VERSION: string;
-	export const NVM_BIN: string;
-	export const VSCODE_IPC_HOOK_CLI: string;
 	export const npm_package_json: string;
-	export const NVM_INC: string;
-	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const VSCODE_GIT_ASKPASS_NODE: string;
+	export const XDEBUG_CONFIG: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
-	export const COLORTERM: string;
-	export const WSL_DISTRO_NAME: string;
 	export const COLOR: string;
-	export const NVM_DIR: string;
-	export const WAYLAND_DISPLAY: string;
-	export const LOGNAME: string;
-	export const NAME: string;
-	export const WSL_INTEROP: string;
-	export const PULSE_SERVER: string;
-	export const _: string;
 	export const npm_config_prefix: string;
 	export const npm_config_npm_version: string;
 	export const TERM: string;
 	export const npm_config_cache: string;
+	export const XDEBUG_MODE: string;
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
+	export const LARAVEL_SAIL: string;
+	export const SUPERVISOR_PHP_COMMAND: string;
 	export const NODE: string;
-	export const WT_SESSION: string;
-	export const XDG_RUNTIME_DIR: string;
-	export const DISPLAY: string;
-	export const LANG: string;
-	export const LS_COLORS: string;
-	export const VSCODE_GIT_IPC_HANDLE: string;
-	export const TERM_PROGRAM: string;
+	export const WWWUSER: string;
+	export const SUPERVISOR_PHP_USER: string;
 	export const npm_lifecycle_script: string;
-	export const SHELL: string;
+	export const DEBIAN_FRONTEND: string;
 	export const npm_lifecycle_event: string;
-	export const LESSCLOSE: string;
-	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
-	export const PWD: string;
 	export const npm_execpath: string;
-	export const NVM_CD_FLAGS: string;
-	export const XDG_DATA_DIRS: string;
+	export const PWD: string;
 	export const npm_config_global_prefix: string;
 	export const npm_command: string;
-	export const HOSTTYPE: string;
-	export const WSLENV: string;
+	export const TZ: string;
+	export const IGNITION_LOCAL_SITES_PATH: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -152,7 +128,7 @@ declare module '$env/static/private' {
  * ```
  */
 declare module '$env/static/public' {
-	
+	export const PUBLIC_GOOGLE_MAPS: string;
 }
 
 /**
@@ -225,66 +201,42 @@ declare module '$env/dynamic/private' {
 		SCOUT_DRIVER: string;
 		MEILISEARCH_HOST: string;
 		MEILISEARCH_NO_ANALYTICS: string;
-		LESSOPEN: string;
-		USER: string;
 		npm_config_user_agent: string;
-		GIT_ASKPASS: string;
+		HOSTNAME: string;
 		npm_node_execpath: string;
-		SHLVL: string;
-		WT_PROFILE_ID: string;
 		npm_config_noproxy: string;
-		MOTD_SHOWN: string;
 		HOME: string;
-		TERM_PROGRAM_VERSION: string;
-		NVM_BIN: string;
-		VSCODE_IPC_HOOK_CLI: string;
 		npm_package_json: string;
-		NVM_INC: string;
-		VSCODE_GIT_ASKPASS_MAIN: string;
-		VSCODE_GIT_ASKPASS_NODE: string;
+		XDEBUG_CONFIG: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
-		COLORTERM: string;
-		WSL_DISTRO_NAME: string;
 		COLOR: string;
-		NVM_DIR: string;
-		WAYLAND_DISPLAY: string;
-		LOGNAME: string;
-		NAME: string;
-		WSL_INTEROP: string;
-		PULSE_SERVER: string;
-		_: string;
 		npm_config_prefix: string;
 		npm_config_npm_version: string;
 		TERM: string;
 		npm_config_cache: string;
+		XDEBUG_MODE: string;
 		npm_config_node_gyp: string;
 		PATH: string;
+		LARAVEL_SAIL: string;
+		SUPERVISOR_PHP_COMMAND: string;
 		NODE: string;
-		WT_SESSION: string;
-		XDG_RUNTIME_DIR: string;
-		DISPLAY: string;
-		LANG: string;
-		LS_COLORS: string;
-		VSCODE_GIT_IPC_HANDLE: string;
-		TERM_PROGRAM: string;
+		WWWUSER: string;
+		SUPERVISOR_PHP_USER: string;
 		npm_lifecycle_script: string;
-		SHELL: string;
+		DEBIAN_FRONTEND: string;
 		npm_lifecycle_event: string;
-		LESSCLOSE: string;
-		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;
-		PWD: string;
 		npm_execpath: string;
-		NVM_CD_FLAGS: string;
-		XDG_DATA_DIRS: string;
+		PWD: string;
 		npm_config_global_prefix: string;
 		npm_command: string;
-		HOSTTYPE: string;
-		WSLENV: string;
+		TZ: string;
+		IGNITION_LOCAL_SITES_PATH: string;
 		INIT_CWD: string;
 		EDITOR: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
@@ -304,6 +256,7 @@ declare module '$env/dynamic/private' {
  */
 declare module '$env/dynamic/public' {
 	export const env: {
+		PUBLIC_GOOGLE_MAPS: string;
 		[key: `PUBLIC_${string}`]: string | undefined;
 	}
 }
