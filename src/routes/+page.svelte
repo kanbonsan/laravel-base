@@ -23,7 +23,7 @@
 </script>
 
 <h1>Welcome to your library project</h1>
-<div bind:this={mapElement} class="h-96"></div>
+<div bind:this={mapElement} style="height:100%;"></div>
 <p>
     Create your package using @sveltejs/package and preview/showcase your work
     with SvelteKit
