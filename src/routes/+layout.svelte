@@ -6,18 +6,7 @@
 
 <div class="header">HEADER</div>
 <div class="content">
-    <Splitpanes
-        horizontal
-        style="height:100%"
-        dblClickSplitter={false}
-    >
-        <Pane size={50}>
-            <slot />
-        </Pane>
-        <Pane size={50}>
-            <p>statusbar - and yet, another splitpane, same technique</p>
-        </Pane>
-    </Splitpanes>
+    <slot />
 </div>
 
 <div class="footer bg-pink-400">FOOTER</div>

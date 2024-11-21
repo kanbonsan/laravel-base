@@ -1,36 +1,16 @@
 <script lang="ts">
-    import { onMount , setContext} from "svelte";
-    import { PUBLIC_GOOGLE_MAPS as MAPS_KEY } from "$env/static/public";
-    import { Loader } from "@googlemaps/js-api-loader";
-
-    let mapElement: any;
-    let map;
-
-    onMount(async () => {
-        const loader = new Loader({
-            apiKey: MAPS_KEY,
-            version: "weekly",
-        });
-
-        const { Map } = await loader.importLibrary("maps");
-        const { Marker } = await loader.importLibrary("marker");
-
-        map = new Map(mapElement, {
-            center: { lat: -25.344, lng: 131.031 },
-            zoom: 3,
-        });
-    });
+    import { onMount } from "svelte";
+    import { Pane, Splitpanes } from "svelte-splitpanes";
+    import GmapComponent from "$lib/GmapComponent.svelte";
 </script>
 
-<h1>Welcome to your library project</h1>
-<div bind:this={mapElement} style="height:100%;"></div>
-<p>
-    Create your package using @sveltejs/package and preview/showcase your work
-    with SvelteKit
-</p>
-<p>
-    Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the
-    documentation
-</p>
-
-<h1 class="box-border text-3xl text-right">Hello world!</h1>
+<Splitpanes horizontal style="height:100%" dblClickSplitter={false}>
+    <Pane size={50}>
+        <GmapComponent>
+            
+        </GmapComponent>
+    </Pane>
+    <Pane size={50}>
+        <p>statusbar - and yet, another splitpane, same technique</p>
+    </Pane>
+</Splitpanes>
