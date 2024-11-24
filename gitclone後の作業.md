@@ -10,9 +10,19 @@ docker run --rm \
     composer install --ignore-platform-reqs
 ```
 
-## .envの作成
+## .envの作成と設定
+
+- `copy .env.example .env` で`.env`ファイルを作成する。
+- `DB_CONNECTION=mysql`
+- `DB_HOST=mysql` (これ重要)
+- その他の環境変数の設定（API_KEYなど）
 
 ## Laravel環境の初期化
+- `sail artisan key:generate`
+- `sail artisan migrate`
+
+うまくいかないことあり。Dockerのイメージを作り直したりする必要あり。
+都度ググるしかない。
 
 ## npm install
 `sail npm install`

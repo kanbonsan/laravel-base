@@ -1,10 +1,17 @@
 <script lang="ts">
     import { onMount, setContext } from "svelte";
+    import type { Snippet } from "svelte";
     import { PUBLIC_GOOGLE_MAPS as MAPS_KEY } from "$env/static/public";
     import { Loader } from "@googlemaps/js-api-loader";
 
     let mapElement: HTMLElement | undefined = $state();
     let map = $state();
+
+    // type Props = {
+    //     children: Snippet;
+    // };
+
+    const { children } = $props();
 
     onMount(async () => {
         const loader = new Loader({
@@ -26,4 +33,7 @@
 </script>
 
 <div bind:this={mapElement} style="position: relative; height:100%;"></div>
-<slot />
+// デフォルトのスロット
+<div>
+    {@render children()}
+</div>
