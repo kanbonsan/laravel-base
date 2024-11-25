@@ -2,15 +2,16 @@
     
     import { Pane, Splitpanes } from "svelte-splitpanes";
     import GmapComponent from "$lib/GmapComponent.svelte";
+    import Marker from "$lib/Marker.svelte";
 </script>
 
 <Splitpanes horizontal style="height:100%" dblClickSplitter={false}>
     <Pane size={50}>
         <GmapComponent>
-            <Markers></Markers>
+            <Marker></Marker>
         </GmapComponent>
     </Pane>
     <Pane size={50}>
-        <p>statusbar - and yet, another splitpane, same technique</p>
+        <p>Profile Map Area</p>
     </Pane>
 </Splitpanes>
