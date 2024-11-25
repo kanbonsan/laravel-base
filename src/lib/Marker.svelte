@@ -1,16 +1,19 @@
 <script lang="ts">
-    import { onMount, getContext, hasContext } from "svelte";
+    import { onMount, getContext } from "svelte";
 
-    const { loader, map } = getContext("gmap");
-    console.log(map());
+    const { loader, map, test }: { loader: any; map: any; test: any } =
+        getContext("gmap");
 
     onMount(async () => {
-        console.log(map)
+        //console.log(test, loader, $map);
         const { AdvancedMarkerElement } = await loader.importLibrary("marker");
 
-        const m = new AdvancedMarkerElement({
-            map,
-            position: { lat: 35.29147, lng: 137.06225 },
-        });
+        setTimeout(() => {
+            console.log($map);
+            const m = new AdvancedMarkerElement({
+                map:$map,
+                position: { lat: 35.29147, lng: 137.06225 },
+            });
+        }, 2000);
     });
 </script>

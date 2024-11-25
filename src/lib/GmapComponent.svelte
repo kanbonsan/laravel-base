@@ -4,10 +4,12 @@
     import type { Snippet } from "svelte";
     import { PUBLIC_GOOGLE_MAPS as MAPS_KEY } from "$env/static/public";
     import { Loader } from "@googlemaps/js-api-loader";
+    //import Marker from "./Marker.svelte";
 
     let mapElement: HTMLElement | undefined = $state();
 
     let map = writable()
+    let test = writable(1)
 
     type Props = {
         children: Snippet;
@@ -20,13 +22,14 @@
         version: "weekly",
     });
 
-    setContext("gmap", ({loader, map: ()=>$map}));
+    setContext("gmap", ({loader, map, test}));
 
     onMount(async () => {
         const { Map } = await loader.importLibrary("maps");
-        $map = new Map(mapElement as HTMLElement, {
+        $map= new Map(mapElement as HTMLElement, {
             center: { lat: 35.29147, lng: 137.06225 },
             zoom: 15,
+            mapId: "my-test-map"
         });
     });
 </script>
