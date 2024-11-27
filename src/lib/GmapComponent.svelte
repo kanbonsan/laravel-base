@@ -1,14 +1,13 @@
 <script lang="ts">
-    import { onMount, setContext } from "svelte";
+    import { onMount, onDestroy, setContext } from "svelte";
     import { writable } from "svelte/store";
     import type { Snippet } from "svelte";
-    import { PUBLIC_GOOGLE_MAPS as MAPS_KEY } from "$env/static/public";
-    import { Loader } from "@googlemaps/js-api-loader";
+    import { loader } from "$lib/initGmap.js";
 
     // google map を描画する div エレメント
     let mapElement: HTMLElement | undefined = $state();
 
-    /** 
+    /**
      * google map マップオブジェクト
      * 　store にいれることでコンポーネントをまたいで利用する
      */
@@ -22,11 +21,6 @@
 
     const { children }: Props = $props();
 
-    const loader = new Loader({
-        apiKey: MAPS_KEY,
-        version: "weekly",
-    });
-
     setContext("gmap", { loader, map });
 
     onMount(() => {
@@ -37,7 +31,6 @@
                 zoom: 15,
                 mapId: "4b9d08c3166f66cd",
             });
-            return "ok";
         })();
     });
 </script>
