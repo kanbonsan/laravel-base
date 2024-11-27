@@ -1,6 +1,7 @@
 <script lang="ts">
     import { Pane, Splitpanes } from "svelte-splitpanes";
     import GmapComponent from "$lib/GmapComponent.svelte";
+    import StreetviewComponent from "$lib/StreetviewComponent.svelte";
     import Marker from "$lib/Marker.svelte";
 </script>
 
@@ -18,7 +19,7 @@
     <Pane size={50}>
         <Splitpanes horizontal>
             <Pane size={50}>
-                <p>streetview</p>
+                <StreetviewComponent></StreetviewComponent>
             </Pane>
             <Pane size={50}></Pane>
         </Splitpanes>
