@@ -5,9 +5,3 @@ export const loader = new Loader({
     apiKey: PUBLIC_GOOGLE_MAPS,
     version: "weekly",
 })
-
-export const loader2 = new Loader({
-    apiKey: PUBLIC_GOOGLE_MAPS,
-    version: "weekly",
-})
-

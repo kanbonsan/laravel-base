@@ -1,5 +1,6 @@
 <script>
     import "../app.css";
+    import StatusBarComponent from "$lib/StatusBarComponent.svelte"
 </script>
 
 <div class="header">HEADER</div>
@@ -7,7 +8,9 @@
     <slot />
 </div>
 
-<div class="footer bg-pink-400">FOOTER</div>
+<div class="footer bg-pink-400">
+    <StatusBarComponent></StatusBarComponent>
+</div>
 
 <style global lang="scss">
     :root {

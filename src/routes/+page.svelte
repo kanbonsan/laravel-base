@@ -2,6 +2,8 @@
     import { Pane, Splitpanes } from "svelte-splitpanes";
     import GmapComponent from "$lib/GmapComponent.svelte";
     import StreetviewComponent from "$lib/StreetviewComponent.svelte";
+    import ConsoleComponent from "$lib/ConsoleComponent.svelte"
+    
     import Marker from "$lib/Marker.svelte";
 </script>
 
@@ -21,7 +23,9 @@
             <Pane size={50}>
                 <StreetviewComponent></StreetviewComponent>
             </Pane>
-            <Pane size={50}></Pane>
+            <Pane size={50}>
+                <ConsoleComponent></ConsoleComponent>
+            </Pane>
         </Splitpanes>
     </Pane>
 </Splitpanes>

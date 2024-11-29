@@ -3,6 +3,7 @@
     import { writable } from "svelte/store";
     import type { Snippet } from "svelte";
     import { loader } from "$lib/initGmap.js";
+    import { statusbar } from "./store/statusBar.store.js";
 
     // google map を描画する div エレメント
     let mapElement: HTMLElement | undefined = $state();
@@ -31,6 +32,11 @@
                 zoom: 15,
                 mapId: "4b9d08c3166f66cd",
             });
+            $statusbar = "mapを描画しました"
+
+            $map.addListener("click", (ev)=>{
+                $statusbar = `map onclick ${ev.latLng.lat()}:${ev.latLng.lng()}`
+            })
         })();
     });
 </script>
