@@ -12,7 +12,7 @@
      * google map マップオブジェクト
      * 　store にいれることでコンポーネントをまたいで利用する
      */
-    let map = writable();
+    let map = writable<google.maps.Map>();
 
     let promise = $state();
 
@@ -32,11 +32,16 @@
                 zoom: 15,
                 mapId: "4b9d08c3166f66cd",
             });
-            $statusbar = "mapを描画しました"
+            $statusbar = "mapを描画しました";
 
-            $map.addListener("click", (ev)=>{
-                $statusbar = `map onclick ${ev.latLng.lat()}:${ev.latLng.lng()}`
-            })
+            $map.addListener(
+                "click",
+                (
+                    ev: google.maps.MapMouseEvent | google.maps.IconMouseEvent,
+                ) => {
+                    $statusbar = `map onclick ${ev.latLng!.lat()}:${ev.latLng!.lng()}`;
+                },
+            );
         })();
     });
 </script>

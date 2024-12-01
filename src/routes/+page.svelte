@@ -2,9 +2,11 @@
     import { Pane, Splitpanes } from "svelte-splitpanes";
     import GmapComponent from "$lib/GmapComponent.svelte";
     import StreetviewComponent from "$lib/StreetviewComponent.svelte";
-    import ConsoleComponent from "$lib/ConsoleComponent.svelte"
-    
-    import Marker from "$lib/Marker.svelte";
+    import ConsoleComponent from "$lib/ConsoleComponent.svelte";
+    import TestComponent from "$lib/TestComponent.svelte";
+
+    import MapsMarker from "$lib/MapsMarker.svelte";
+    import MapsPolyline from "$lib/MapsPolyline.svelte";
 </script>
 
 <Splitpanes style="height:100%" dblClickSplitter={false}>
@@ -12,10 +14,13 @@
         <Splitpanes horizontal>
             <Pane size={50}>
                 <GmapComponent>
-                    <Marker></Marker>
+                    <MapsMarker></MapsMarker>
+                    <MapsPolyline></MapsPolyline>
                 </GmapComponent>
             </Pane>
-            <Pane size={50}></Pane>
+            <Pane size={50}>
+                <TestComponent></TestComponent>
+            </Pane>
         </Splitpanes>
     </Pane>
     <Pane size={50}>
