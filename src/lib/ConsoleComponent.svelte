@@ -1,14 +1,16 @@
 <script lang="ts">
-    import { statusbar } from "$lib/store/statusBar.store.js";
-    import { onDestroy } from "svelte";
+    import MySlider from "$lib/MySlider.svelte"
+    
+    let min = $state(100)
+    let max = $state(1000)
 
-    let messages: [string] = [];
-
-    const unsubscribe = statusbar.subscribe((newMes) => {
-        messages = [...messages, newMes];
-    });
 </script>
 
-{#each messages as mes}
-    <p>{mes}</p>
-{/each}
+<p>my range slider test</p>
+
+<div>in Parent</div>
+<div>
+    min: {min}, max:{max}
+</div>
+
+<MySlider bind:min={min} bind:max={max}></MySlider>

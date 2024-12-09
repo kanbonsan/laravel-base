@@ -7,6 +7,8 @@
 
     import MapsMarker from "$lib/MapsMarker.svelte";
     import MapsPolyline from "$lib/MapsPolyline.svelte";
+
+    import ApiTestComponent from "$lib/ApiTestComponent.svelte"
 </script>
 
 <Splitpanes style="height:100%" dblClickSplitter={false}>
@@ -29,7 +31,7 @@
                 <StreetviewComponent></StreetviewComponent>
             </Pane>
             <Pane size={50}>
-                <ConsoleComponent></ConsoleComponent>
+                <ApiTestComponent></ApiTestComponent>
             </Pane>
         </Splitpanes>
     </Pane>
