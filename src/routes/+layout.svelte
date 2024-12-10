@@ -1,11 +1,14 @@
-<script>
+<script lang="ts">
     import "../app.css";
-    import StatusBarComponent from "$lib/StatusBarComponent.svelte"
+    import StatusBarComponent from "$lib/StatusBarComponent.svelte";
+    import type { Snippet } from "svelte";
+
+    let { children }: { children: Snippet } = $props();
 </script>
 
 <div class="header">HEADER</div>
 <div class="content">
-    <slot />
+    {@render children()}
 </div>
 
 <div class="footer bg-pink-400">

@@ -8,11 +8,8 @@
     let sv = writable();
     let promise = $state();
 
-    type Props = {
-        children: Snippet;
-    };
+    let { children }: { children: Snippet } = $props();
 
-    const { children }: Props = $props();
     setContext("sv", { loader, sv });
 
     onMount(() => {
@@ -27,3 +24,6 @@
 </script>
 
 <div bind:this={svElement} style="position: relative; height:100%;"></div>
+{#if children}
+    {@render children()}
+{/if}

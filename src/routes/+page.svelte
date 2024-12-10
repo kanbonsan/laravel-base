@@ -28,7 +28,7 @@
     <Pane size={50}>
         <Splitpanes horizontal>
             <Pane size={50}>
-                <StreetviewComponent></StreetviewComponent>
+                <StreetviewComponent/>
             </Pane>
             <Pane size={50}>
                 <ApiTestComponent></ApiTestComponent>
