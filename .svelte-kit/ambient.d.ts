@@ -48,7 +48,7 @@ declare module '$env/static/private' {
 	export const DB_DATABASE: string;
 	export const DB_USERNAME: string;
 	export const DB_PASSWORD: string;
-	export const SESSION_DRIVER: string;
+	export const SESSION_DRlIVER: string;
 	export const SESSION_LIFETIME: string;
 	export const SESSION_ENCRYPT: string;
 	export const SESSION_PATH: string;
@@ -170,7 +170,7 @@ declare module '$env/dynamic/private' {
 		DB_DATABASE: string;
 		DB_USERNAME: string;
 		DB_PASSWORD: string;
-		SESSION_DRIVER: string;
+		SESSION_DRlIVER: string;
 		SESSION_LIFETIME: string;
 		SESSION_ENCRYPT: string;
 		SESSION_PATH: string;
