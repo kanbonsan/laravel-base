@@ -14,6 +14,12 @@ export default defineConfig({
         fs: {
             allow:[".."],
         },
+        proxy: {
+            "/api":{
+                target: "http://localhost/",
+                changeOrigin: true,
+            }
+        }
     },
     ssr: {
         noExternal: ['@googlemaps/js-api-loader']
